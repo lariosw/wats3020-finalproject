@@ -1,0 +1,219 @@
+/* boostrap overrides*/
+
+.row-no-padding  [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+iframe {
+    width: 100% !important;
+    height: 150px !important;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+aside {
+    position: fixed !important;
+    top: 10px !important;
+}
+
+div .carousel-wrapper {
+    margin: 20px auto !important;
+    width: 400px !important;
+}
+
+/* global */
+.content-wrapper{
+    margin: 0px 25px;
+}
+
+/* header */
+
+header .top-container .ticket{
+    width: 13%;
+    position: absolute;
+    left: 1%;
+    top: 15px;
+    cursor: pointer;
+}
+
+header .top-container .aquarium-pict{
+    width: 100%;
+}
+
+header input{
+    margin-bottom:5px;
+}
+
+/* search */
+#search-wrapper {
+    margin-top:5px;
+}
+
+/* social links */
+aside {
+    float: right;
+}
+
+aside.side-controls {
+    position: absolute;
+    right: 0;
+    top: 250px;
+}
+aside .connectshow {
+    border: solid 2px black;
+}
+
+aside.side-controls > div {
+    display: inline-block;
+}
+.connecthide img {
+    display: none;
+}
+
+/*social links and hover out*/
+aside:hover .connecthide img {
+    display: inline-block;
+}
+
+div #webcam {
+    margin: 0;
+    margin-right: -9px;
+    height: 150px;
+}
+
+div #socialmedia {
+    margin: 0;
+    margin-right:-9px;
+    height: 253px;
+}
+aside.side-controls > div {
+    display: inline-block;
+}
+
+/* insta photos */
+#photo-container ul {
+    list-style-type: none;
+    padding:0; 
+    margin:0;
+}
+
+#photo-container iframe {
+    /*width: 100% !important;
+    height: 450px !important;*/
+}
+
+/* menu bar */
+nav.top-navbar li {
+    list-style: none;
+}
+
+
+
+
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) { 
+    header .header-actions {
+        position: absolute;
+        right: 0;
+        top: 0px;
+        width: 100px;
+    }
+    header .header-actions button{
+        padding:3px;
+        font-size:12px;
+    }
+    header {
+        margin-top:27px;
+    }
+    
+    aside.side-controls .connecthide {
+        display: none;
+    }
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    header .header-actions button{
+        margin: 5px !important;
+    }
+    
+    aside.side-controls .connecthide {
+        display: none;
+    }
+      
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    aside.side-controls .connecthide {
+        display: inline-block;
+    }
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    aside.side-controls .connecthide {
+        display: inline-block;
+    }
+}
+/* bottom nav bar */
+#bottom-nav {
+    padding-bottom: 5px;
+   display: inline-block;
+}
+
+#bottom-nav li {
+    margin: 0;
+    padding: 0;
+    width: 125px;
+    list-style: none;
+}
+#bottom-info {
+    width: 1000px;
+    padding-top: 5px;
+}
+#bottom-info li {
+    list-style: none;
+    font-size: 10px;
+    
+}
+
+/*notification bar */
+#notificationbar {
+    height: 100px;
+    border-left-width: 2px;
+}
+
+#notificationbar div img {
+    height: 100px;
+    width: 175px;
+    border: solid 2px black;
+    display: block;
+    margin: 0 auto;
+}
+
+div .hourschedule .wordshours {
+    text-align: center;
+    border-bottom: solid 2px black;
+}
+
+div #newletter .news {
+   width: 100% 
+}
+
+
+
