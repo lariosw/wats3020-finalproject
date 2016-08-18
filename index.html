@@ -1,0 +1,328 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Final Project</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+ 
+
+</head>
+
+<body>
+
+    <div class="content-wrapper">
+        
+        <!--Header-->
+        <header class="header header-fixed-top row row-no-padding" role="header">
+
+            <div class="sign-up visible-lg col-lg-2">
+                <div>Not a member?</div>
+                <input type="text" placeholder="Email" class="form-control">
+                <button type="submit" class="btn btn-primary signup" name="signupButton">Sign up!</button>
+            </div>
+            <div class="top-container col-xs-12 col-sm-11 col-lg-8">
+
+                <img src="/aquariumpicts/ticket.gif" class="ticket" alt="ticket-pict">
+
+                <img src="/aquariumpicts/aquariumlogo.png" class="aquarium-pict" alt="Seattle-Aquarium">
+            </div>
+            <div class="sign-in visible-lg col-lg-2">
+                <div>Sign In</div>
+                <input type="text" placeholder="Username" class="form-control">
+                <input type="password" placeholder="Password" class="form-control">
+                <button type="submit" class="btn btn-primary login" name="loginButton">Login</button>
+            </div>
+            <div class="header-actions col-xs-1 hidden-lg">
+                <button type="submit" class="btn btn-primary signup" name="signupButton">Sign up!</button>
+                <button type="submit" class="btn btn-primary login" name="loginButton">Login</button>
+            </div>
+        </header>
+
+        <!--Search Bar-->
+        <div id="search-wrapper" class="row row-no-padding">
+            <div class="visible-lg col-lg-2"></div>
+            <div class="col-xs-12 col-sm-11 col-lg-8">
+                <div class="col-xs-11">
+                    <input type="text" placeholder="Search" class="form-control" name="searchText" />
+                </div>
+                <div class="col-xs-1">
+                    <button type="submit" class="btn btn-primary search" name="searchButton">Go</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Navigation Bar-->
+        <nav class="nav top-navbar row ">
+            <ul>
+                <li class="plan col-xs-6 col-sm-4 col-md-2"> Plan Your Visit
+                </li>
+                <li class="donate col-xs-6 col-sm-4 col-md-2"> Membership &amp; Donate
+                </li>
+                <li class="animals col-xs-6 col-sm-4 col-md-2"> Animals &amp; Activities
+                </li>
+                <li class="Events col-xs-6 col-sm-4 col-md-2"> Events &amp; Programs
+                </li>
+                <li class="Conserve col-xs-6 col-sm-4 col-md-2"> Conservation
+                </li>
+                <li class="About col-xs-6 col-sm-4 col-md-2"> About Us
+                </li>
+            </ul>
+        </nav>
+
+            <!--Carousel Wrapper-->
+            <div class="carousel-wrapper row visible-lg visible-md visible-sm">
+                <div id="carousel-example-generic" class="carousel" data-ride="carousel" data-interval="3000">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="aquariumpicts/carousel1.png" alt="photo1">
+                            <div class="carousel-caption">
+                                <h3>Examine</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="aquariumpicts/carousel2.png" alt="photo2">
+                            <div class="carousel-caption">
+                                <h3>Experience</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="aquariumpicts/carousel3.png" alt="photo3">
+                            <div class="carousel-caption">
+                                <h3>Learn</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Controls-->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+    
+        <!-- facebook photos -->
+        <div id="photo-container" class="photo-box row row-no-padding">
+       
+                    <div class="instagram1 col-lg-2 col-md-4 visible-lg visible-md">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:62.4537037037% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BIQVRR3gVhl/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Here&#39;s a fun #OctoFact: the arm span of a giant Pacific #octopus can be up to an incredible 20 feet across—about the height of a two-story building! #SuckerSunday</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Seattle Aquarium (@seattleaquarium) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-07-24T19:01:06+00:00">Jul 24, 2016 at 12:01pm PDT</time></p></div></blockquote>
+                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+                    </div>
+                    
+                    <div class="instagram2  col-lg-2  col-md-4 visible-lg visible-md">
+                            <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px;  padding:0;">
+                                <div style="padding:8px;">
+                                    <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:49.212962963% 0; text-align:center; width:100%;">
+                                        <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
+                                    </div>
+                                    <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BIsuECVg5Bw/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Seattle Aquarium (@seattleaquarium)</a> on
+                                        <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-04T19:36:29+00:00">Aug 4, 2016 at 12:36pm PDT</time>
+                                    </p>
+                                </div>
+                            </blockquote>
+                            <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+                        </div>
+
+                    <div class="instagram3  col-lg-2  col-md-4 visible-lg visible-md">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:35.9722222222% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BIYeLyFgdfG/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">#DidYouKnow painted anemones can live for up to 80 years? #BeachNaturalist Jen Strongin visits these particular Constellation Beach anemones year after year. Check out our blog (link in bio) to find out what else is new this week on the beach. #KnowYourBeach</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Seattle Aquarium (@seattleaquarium) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-07-27T22:52:55+00:00">Jul 27, 2016 at 3:52pm PDT</time></p></div></blockquote>
+                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+                    </div>
+                    
+                    <div class="instagram4  col-lg-2  col-md-4 visible-lg visible-md">
+                        <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0;">
+                            <div style="padding:8px;">
+                                <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:59.0277777778% 0; text-align:center; width:100%;">
+                                    <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
+                                </div>
+                                <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BI-t3_-g7Y1/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Seattle Aquarium (@seattleaquarium)</a> on
+                                    <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-11T19:21:10+00:00">Aug 11, 2016 at 12:21pm PDT</time>
+                                </p>
+                            </div>
+                        </blockquote>
+                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+                    </div>
+
+
+                    <div class="instagram5  col-lg-2  col-md-4 visible-lg visible-md">
+                           <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:42.4528301887% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BIqDX6dgsUF/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Seattle Aquarium (@seattleaquarium)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-03T18:44:59+00:00">Aug 3, 2016 at 11:44am PDT</time></p></div></blockquote>
+                            <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+                    </div>
+                    
+                    <div class="instagram6  col-lg-2  col-md-4 visible-lg visible-md">
+                        <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0;">
+                            <div style="padding:8px;">
+                                <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:58.4259259259% 0; text-align:center; width:100%;">
+                                    <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
+                                </div>
+                                <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BI0sA2vgm0A/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Seattle Aquarium (@seattleaquarium)</a> on
+                                    <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-07T21:52:30+00:00">Aug 7, 2016 at 2:52pm PDT</time>
+                                </p>
+                            </div>
+                        </blockquote>
+                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+                    </div>
+             
+                    <div class="instagram7  col-lg-2 visible-lg">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:43.5648148148% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BIGI5D2AIk5/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Do you have a favorite #SeattleAquarium fish? Let us know in the comments!</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Seattle Aquarium (@seattleaquarium) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-07-20T20:00:32+00:00">Jul 20, 2016 at 1:00pm PDT</time></p></div></blockquote>
+                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+                    </div>
+                
+                    <div class="instagram8  col-lg-2 visible-lg">
+                        <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0;">
+                            <div style="padding:8px;">
+                                <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;">
+                                    <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
+                                </div>
+                                <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BIk1mpGgGaQ/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Seattle Aquarium (@seattleaquarium)</a> on
+                                    <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-01T18:08:27+00:00">Aug 1, 2016 at 11:08am PDT</time>
+                                </p>
+                            </div>
+                        </blockquote>
+                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+                    </div>
+
+                    <div class="instagram9  col-lg-2 visible-lg">
+                        <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BJI71etgYxt/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A video posted by Seattle Aquarium (@seattleaquarium)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-15T18:35:34+00:00">Aug 15, 2016 at 11:35am PDT</time></p></div></blockquote>
+                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+                    </div>
+                    
+                    <div class="instagram10  col-lg-2 visible-lg">
+                        <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0;">
+                            <div style="padding:8px;">
+                                <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;">
+                                    <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
+                                </div>
+                                <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BInlQjVAmar/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Seattle Aquarium (@seattleaquarium)</a> on
+                                    <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-02T19:43:21+00:00">Aug 2, 2016 at 12:43pm PDT</time>
+                                </p>
+                            </div>
+                        </blockquote>
+                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+                    </div>
+            
+                
+            <div class="instagram11  col-lg-2 visible-lg">
+                    
+                      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:42.037037037% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BJLoKbbgu19/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Say hello to Odie, our new male giant Pacific #octopus. He currently tips the scales at 25 pounds!</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Seattle Aquarium (@seattleaquarium) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-16T19:41:23+00:00">Aug 16, 2016 at 12:41pm PDT</time></p></div></blockquote>
+                            <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+                    </div>
+
+                
+                    <div class="instagram12  col-lg-2 visible-lg">
+                        <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0;">
+                            <div style="padding:8px;">
+                                <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;">
+                                    <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
+                                </div>
+                                <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BInlQjVAmar/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Seattle Aquarium (@seattleaquarium)</a> on
+                                    <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-02T19:43:21+00:00">Aug 2, 2016 at 12:43pm PDT</time>
+                                </p>
+                            </div>
+                        </blockquote>
+                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+                    </div>
+        </div>
+
+        <!-- notification bar -->
+            <div id="notificationbar" class="notifications notifybar row">
+                <div class="left-most buytickets col-lg-2 col-md-4  col-sm-6 col-xs-12"> 
+                    <img src="aquariumpicts/purchasetickets.png" alt="purchase">
+                </div>
+                
+                <div class="member col-lg-2 col-md-4  col-sm-6 col-xs-12"> 
+                    <img src="aquariumpicts/familymember.png" alt="member">
+                </div>
+                <div class="hourschedule col-lg-2 col-md-4  col-sm-6 col-xs-12">
+                    <img src="aquariumpicts/hoursphoto.png">
+                </div>
+                
+                <div class="directions col-lg-2 col-md-4  col-sm-6 col-xs-12">
+                <img src="aquariumpicts/directions.png" alt="directions">
+                </div>
+                
+                <div class="events col-lg-2 col-md-4  col-sm-6 col-xs-12">
+                <img src="aquariumpicts/events.png" alt="events">
+                </div>
+                
+                <div class="party col-lg-2 col-md-4  col-sm-6 col-xs-12">
+                <img src="aquariumpicts/party.jpg" alt="privateparty">
+                </div>
+            </div>
+        
+        <div id="newsletter" class="newsletter-bar row row-no-padding">
+            
+            <a class="col-xs-12" href="http://www.seattleaquarium.org/subscribe" id="subscribe-link">
+                <img src="aquariumpicts/newsletter.png" class="col-xs-12" id="newsletterpict">
+            </a>
+        </div>
+        
+        <aside class="side-controls">
+            
+            <div class="connecthide"> 
+                <img src="aquariumpicts/webcam.png" id="webcam">
+                <img src="aquariumpicts/socialmediapict.png" id="socialmedia">
+            </div>
+            <div class="connectshow">
+                <img src="aquariumpicts/connectimg.png">
+            </div>
+        </aside>
+        
+        <footer id="footer" class="footer">
+            <div id="bottom-nav" class="bottom-navbar visible-lg visible-md row">
+                <ul>
+                    <li class="home col-md-2">Home
+                    </li>
+                    <li class="jobs col-md-2">Jobs
+                    </li>
+                    <li class="volunteer col-md-2">Volunteer
+                    </li>
+                    <li class="press col-md-2">Press Room
+                    </li>
+                    <li class="contact us col-md-2"> Contact Us
+                    </li>
+                    <li class="privacy col-md-2">Privacy Policy
+                    </li>
+                    <li class="siteMap col-md-2"> Site Map
+                    </li>
+                    <li class="logIn col-md-2">Login
+                    </li>
+                </ul>
+            </div>
+            <div id="bottom-info" class="bottom-info visible-lg visible-md row">
+                <ul>
+                    <li class="address col-lg-2 col-md-2"> Seattle Aquarium, 1483 Alaskan Way, Pier 59, Seattle, WA 98101
+                    </li>
+                    <li class="phone col-lg-2 col-md-2"> Phone: (206) 386-4300
+                    </li>
+                    <li class="email col-lg-2 col-md-2"> Email: info@seattleaquarium.org
+                    </li>
+                    <li class="hours col-lg-2 col-md-2"> Hours: 9:30am-5pm daily
+                    </li>
+                    <li class="trademark col-lg-2 col-md-2"> @2016, Seattle Aquarium is a registered 501(c)(3) nonprofit
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    
+    
+    <script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+
+</body>
