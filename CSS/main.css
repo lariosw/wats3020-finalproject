@@ -68,7 +68,7 @@ aside {
 aside.side-controls {
     position: absolute;
     right: 0;
-    top: 250px;
+    top: 125px !important;
 }
 aside .connectshow {
     border: solid 2px black;
@@ -101,11 +101,20 @@ aside.side-controls > div {
     display: inline-block;
 }
 
+div #photo-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 /* insta photos */
 #photo-container ul {
     list-style-type: none;
     padding:0; 
     margin:0;
+}
+
+ {
+margin: 5px;
 }
 
 #photo-container iframe {
@@ -118,6 +127,10 @@ nav.top-navbar li {
     list-style: none;
 }
 
+nav.top-navbar {
+    border-top: 2px solid black !important;
+    border-bottom: 2px solid black !important;
+}
 
 
 
@@ -171,6 +184,11 @@ nav.top-navbar li {
     }
 }
 /* bottom nav bar */
+footer {
+    border-top: 2px solid black;
+    margin-top: 30px;
+}
+
 #bottom-nav {
     padding-bottom: 5px;
    display: inline-block;
@@ -184,7 +202,7 @@ nav.top-navbar li {
 }
 #bottom-info {
     width: 1000px;
-    padding-top: 5px;
+    padding-top: 12px;
 }
 #bottom-info li {
     list-style: none;
@@ -196,6 +214,8 @@ nav.top-navbar li {
 #notificationbar {
     height: 100px;
     border-left-width: 2px;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
 }
 
 #notificationbar div img {
@@ -211,9 +231,87 @@ div .hourschedule .wordshours {
     border-bottom: solid 2px black;
 }
 
-div #newletter .news {
-   width: 100% 
+div #newletterpict {
+    width: 100%;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+div #bottom-nav {
+    margin-top: 5px;
+}
+
+div.content-wrapper {
+    border: 2px solid black;
+    margin-bottom: 30px;
+}
+
+/*styles*/
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
 }
 
 
+/** page structure **/
+#w {
+  display: block;
+  width: 750px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
 
+#content {
+  display: block;
+  width: 100%;
+  background: #fff;
+  padding: 25px 20px;
+  padding-bottom: 35px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

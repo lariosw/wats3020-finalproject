@@ -7,13 +7,17 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+   
+    <!-- stylesheets-->
     <link rel="stylesheet" type="text/css" href="CSS/main.css">
-
+    <link rel="stylesheet" href="CSS/YouTubePopUp.css">
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
- 
-
+  <link rel="stylesheet" type="text/css" media="all" href="style.css">
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <!-- jQuery plugin leanModal under MIT License http://leanmodal.finelysliced.com.au/ -->
+    
+    
 </head>
 
 <body>
@@ -25,24 +29,59 @@
 
             <div class="sign-up visible-lg col-lg-2">
                 <div>Not a member?</div>
-                <input type="text" placeholder="Email" class="form-control">
-                <button type="submit" class="btn btn-primary signup" name="signupButton">Sign up!</button>
-            </div>
+
+<form name="myForm" action="demo_form.asp" onsubmit="return validateForm();" method="post">
+Email: <input type="text" name="email">
+<input type="submit" value="Submit">
+</form>
+
+  <div id="loginmodal" style="display:none;">
+    <h1>User Login</h1>
+    <form id="loginform" name="loginform" method="post" action="index.html">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" class="txtfield" tabindex="1">
+      
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" class="txtfield" tabindex="2">
+      
+      <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
+    </form>
+  </div>
+                  </div>
+          
+            
+        <div id="navbar" class="navbar-collapse collapse">
+         
+            <!--<div class="navbar-right user-info">Welcome, <span class="user-fullname">First Last</span> <a class="btn btn-default btn-sm">Logout</a></div>-->
+    
+               
             <div class="top-container col-xs-12 col-sm-11 col-lg-8">
 
                 <img src="aquariumpicts/ticket.gif" class="ticket" alt="ticket-pict">
 
                 <img src="aquariumpicts/aquariumlogo.png" class="aquarium-pict" alt="Seattle-Aquarium">
             </div>
+            
+            
             <div class="sign-in visible-lg col-lg-2">
-                <div>Sign In</div>
-                <input type="text" placeholder="Username" class="form-control">
+              <!--  <div>Sign In</div>
+                <input type="text" placeholder="Username" class="form-control" >
                 <input type="password" placeholder="Password" class="form-control">
                 <button type="submit" class="btn btn-primary login" name="loginButton">Login</button>
             </div>
             <div class="header-actions col-xs-1 hidden-lg">
                 <button type="submit" class="btn btn-primary signup" name="signupButton">Sign up!</button>
                 <button type="submit" class="btn btn-primary login" name="loginButton">Login</button>
+            </div> -->
+            
+        
+                <form name="myForm" action="demo_form.asp" onsubmit="return validateForm();" method="post">
+                    Email: <input type="text" name="username">
+                    
+                    Password: <input type="text" name="password">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
             </div>
         </header>
 
@@ -62,18 +101,29 @@
         <!--Navigation Bar-->
         <nav class="nav top-navbar row ">
             <ul>
-                <li class="plan col-xs-6 col-sm-4 col-md-2"> Plan Your Visit
+                <li> 
+                    <a href="https://tickets.seattleaquarium.org/events/78bd87d9-45ae-fba9-7221-48bf8bff195f" class="plan col-xs-6 col-sm-4 col-md-2">Plan Your Visit</a>
                 </li>
-                <li class="donate col-xs-6 col-sm-4 col-md-2"> Membership &amp; Donate
+        
+                 <li> 
+                    <a href=" http://www.seattleaquarium.org/membership" class="donate col-xs-6 col-sm-4 col-md-2"> Membership &amp; Donate</a>
                 </li>
-                <li class="animals col-xs-6 col-sm-4 col-md-2"> Animals &amp; Activities
+               
+                <li> 
+                    <a href="http://www.seattleaquarium.org/exhibits" class="animals col-xs-6 col-sm-4 col-md-2"> Animals &amp; Activities</a>
                 </li>
-                <li class="Events col-xs-6 col-sm-4 col-md-2"> Events &amp; Programs
+        
+                <li> 
+                    <a href="http://www.seattleaquarium.org/upcoming-events" class="Events col-xs-6 col-sm-4 col-md-2"> Events &amp; Programs</a>
                 </li>
-                <li class="Conserve col-xs-6 col-sm-4 col-md-2"> Conservation
-                </li>
-                <li class="About col-xs-6 col-sm-4 col-md-2"> About Us
-                </li>
+                
+                <li> 
+                    <a href="http://www.seattleaquarium.org/conservation2"  class="Conserve col-xs-6 col-sm-4 col-md-2"> Conservation</a>
+                </li>     
+                
+                <li> 
+                    <a href="http://www.seattleaquarium.org/about"  class="About col-xs-6 col-sm-4 col-md-2"> About Us</a>
+                </li>             
             </ul>
         </nav>
 
@@ -89,19 +139,16 @@
                         <div class="item active">
                             <img src="aquariumpicts/carousel1.png" alt="photo1">
                             <div class="carousel-caption">
-                                <h3>Examine</h3>
                             </div>
                         </div>
                         <div class="item">
                             <img src="aquariumpicts/carousel2.png" alt="photo2">
                             <div class="carousel-caption">
-                                <h3>Experience</h3>
                             </div>
                         </div>
                         <div class="item">
                             <img src="aquariumpicts/carousel3.png" alt="photo3">
                             <div class="carousel-caption">
-                                <h3>Learn</h3>
                             </div>
                         </div>
                     </div>
@@ -250,10 +297,38 @@
                 <div class="hourschedule col-lg-2 col-md-4  col-sm-6 col-xs-12">
                     <img src="aquariumpicts/hoursphoto.png">
                 </div>
-                
                 <div class="directions col-lg-2 col-md-4  col-sm-6 col-xs-12">
-                <img src="aquariumpicts/directions.png" alt="directions">
+                    <img src="aquariumpicts/directions.png" alt="directions">
                 </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">x</span>
+            <p><h1>Directions</h1>
+            <h2>If you are traveling north on I-5</h2>
+
+            <li>Take the Madison St./Convention Place exit.</li>
+            <li>Stay straight to go onto 7th Ave.</li>
+            <li>Take the first left onto Madison St.</li>
+            <li>Turn right onto Alaskan Way.</li>
+            <li>1483 Alaskan Way Pier 59 is on the left.</li>
+            
+            <h2>If you are traveling south on I-5</h2>
+
+            <li>Take Union St. exit, exit 165B.</li>
+            <li>Stay straight to go onto Union St.</li>
+            <li>Turn left onto 5th Ave.</li>
+            <li>Turn right onto Madison St.</li>
+            <li>Turn right onto Alaskan Way.</li>
+            <li>1483 Alaskan Way Pier 59 is on the left.</li>
+              </p>
+          </div>
+
+        </div>
+                
                 
                 <div class="events col-lg-2 col-md-4  col-sm-6 col-xs-12">
                 <img src="aquariumpicts/events.png" alt="events">
@@ -274,7 +349,9 @@
         <aside class="side-controls">
             
             <div class="connecthide"> 
+                <a class="demo" href="https://youtu.be/eTWovtka6hg">
                 <img src="aquariumpicts/webcam.png" id="webcam">
+                </a>
                 <img src="aquariumpicts/socialmediapict.png" id="socialmedia">
             </div>
             <div class="connectshow">
@@ -320,9 +397,10 @@
         </footer>
     </div>
     
-    
+    <!-- js files -->
     <script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="JS/Main.js"></script>
+    <script type="text/javascript" src="JS/YouTubePopUp.jquery.js"></script>
 
 </body>
