@@ -10,9 +10,14 @@
     margin-left: 0 !important;
 }
 
-.instagram img {
-    width: 150px !important;
-    height: 150px !important;
+.instagramPhotos {
+    margin: 20px 0;
+}
+.instagramPhotos img {
+}
+.validationSuccessMsg {
+    margin: 50px;
+    font-size: 25px;
 }
 
 .row-eq-height {
@@ -22,19 +27,39 @@
   display:         flex;
 }
 
+.form-group {
+    padding-top:10px;
+}
+
+form label.error {
+    position: absolute;
+}
+
+.form-group .error {
+    border-color: red;
+}
+
+.form-group label.error {
+    color:red;
+}
+
 aside {
     position: fixed !important;
     top: 10px !important;
 }
 
 div .carousel-wrapper {
-    margin: 20px auto !important;
-    width: 400px !important;
+   /* margin: 20px auto !important;
+    width: 800px !important;*/
+    margin: 20px 0;
+}
+.carousel-wrapper img {
+    width: 100%;
 }
 
 /* global */
 .content-wrapper{
-    margin: 0px 25px;
+    margin: 0px 35px;
 }
 
 /* header */
@@ -42,17 +67,31 @@ div .carousel-wrapper {
 header .top-container .ticket{
     width: 13%;
     position: absolute;
-    left: 1%;
+    left: 5%;
     top: 15px;
     cursor: pointer;
 }
 
 header .top-container .aquarium-pict{
-    width: 100%;
+    width:100%;
 }
 
 header input{
     margin-bottom:5px;
+}
+
+header .sign-up{
+   margin: 10px 0px 0px 0px;
+}
+
+header .validationSuccessMsg{
+    margin: 0px !important;
+    font-size:20px;
+}
+
+
+header .sign-in{
+    margin: 10px 0px 0px 0px;
 }
 
 /* search */
@@ -71,7 +110,9 @@ aside.side-controls {
     top: 125px !important;
 }
 aside .connectshow {
+    width: 35px;
     border: solid 2px black;
+    border-left-width: 0;
 }
 
 aside.side-controls > div {
@@ -113,9 +154,6 @@ div #photo-container {
     margin:0;
 }
 
- {
-margin: 5px;
-}
 
 #photo-container iframe {
     /*width: 100% !important;
@@ -135,54 +173,7 @@ nav.top-navbar {
 
 
 
-/* Extra small devices (phones, less than 768px) */
-@media (max-width: 767px) { 
-    header .header-actions {
-        position: absolute;
-        right: 0;
-        top: 0px;
-        width: 100px;
-    }
-    header .header-actions button{
-        padding:3px;
-        font-size:12px;
-    }
-    header {
-        margin-top:27px;
-    }
-    
-    aside.side-controls .connecthide {
-        display: none;
-    }
-}
 
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-    header .header-actions button{
-        margin: 5px !important;
-    }
-    
-    aside.side-controls .connecthide {
-        display: none;
-    }
-      
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-    aside.side-controls .connecthide {
-        display: inline-block;
-    }
-}
-
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-    aside.side-controls .connecthide {
-        display: inline-block;
-    }
-}
 /* bottom nav bar */
 footer {
     border-top: 2px solid black;
@@ -246,7 +237,83 @@ div.content-wrapper {
     margin-bottom: 30px;
 }
 
-/*styles*/
+#newsletter img{
+    margin: 20px 0;
+}
+
+/*
+***************  Media Queries ***********
+*/
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+    header .header-actions {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 130px;
+    }
+
+    header .header-actions button{
+        padding:3px;
+        font-size:12px;
+    }
+    .content-wrapper {
+        margin-top:35px;
+    }
+
+    #connectWrapper {
+        display: none;
+    }
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    header .header-actions {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 130px;
+    }
+
+    header .header-actions button{
+        padding:3px;
+        font-size:12px;
+    }
+    .content-wrapper {
+        margin-top:35px;
+    }
+
+    #connectWrapper {
+        display: none;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    aside.side-controls .connecthide {
+        display: inline-block;
+    }
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .content-wrapper {
+        margin-top:0px;
+    }
+    aside.side-controls .connecthide {
+        display: inline-block;
+    }
+}
+
+
+/*
+***************  Modal Styles ***********
+*/
+
+
 #lean_overlay {
     position: fixed;
     z-index:100;
@@ -258,8 +325,6 @@ div.content-wrapper {
     display: none;
 }
 
-
-/** page structure **/
 #w {
   display: block;
   width: 750px;
@@ -278,7 +343,6 @@ div.content-wrapper {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
 
-/* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -292,7 +356,6 @@ div.content-wrapper {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
@@ -301,14 +364,12 @@ div.content-wrapper {
     width: 80%; /* Could be more or less, depending on screen size */
 }
 
-/* The Close Button */
 .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
     color: black;

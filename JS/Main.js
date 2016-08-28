@@ -1,26 +1,3 @@
-/*
-* On page ready event
-*/
-
-
-/*login functions*/
-/*$(function(){
-  $('#loginform').submit(function(e){
-    return false;
-  });
-      $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
-});
-
-function validateForm() {
-    var x = document.forms["myForm"]["email"].value;
-    var atpos = x.indexOf("@");
-    var dotpos = x.lastIndexOf(".");
-    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-        alert("Not a valid e-mail address");
-        return false;
- };
-};*/
-
 
 function setupModal(modalId, openElementSelector){
     // Get the modal
@@ -29,6 +6,11 @@ function setupModal(modalId, openElementSelector){
     //register event to open modal 
     $(openElementSelector).click(function(){
         modal.style.display = "block";
+        //clear any validation
+        $(modal).find('form').each(function(){
+            var validator = $(this).validate();
+            validator.resetForm();
+        });
     });
     
     //register event to close modal
@@ -44,6 +26,35 @@ function setupModal(modalId, openElementSelector){
     };
 };
 
+function setupFormValidation(formId, validationRules, successMessage){
+    var $form = $('#' + formId),
+        rules = validationRules || {},
+        successHandler= function(){};
+
+    if(successMessage){
+        successHandler = function(){
+            $form.html('<label class="validationSuccessMsg">' + successMessage + '</label>');
+        };
+    }
+
+    $form.validate({
+        submitHandler: successHandler,
+        invalidHandler: function(){
+            //handle failed validation
+        },
+        rules: rules
+    });
+
+    //general validation for all inputs in the form to be required
+    $form.find('input.required, .form-group.required input').each(function(){
+        $(this).rules("add", {required: true});
+    });
+}
+
+/*
+ * On page ready event
+ */
+
 $(document).ready(function() {
    
     //initialize youtube popup 
@@ -52,62 +63,26 @@ $(document).ready(function() {
     //configure directions modal
     setupModal('directionsModal', '#notificationbar .directions');
     
-        //configure directions modal
+    //configure directions modal
     setupModal('signUpModal', '#newsletter img');
-    
- }); 
-/*
-//code for newsletter sign up
-$(document).on('ready', function(){
-    // Form validation
-    $('#order-form').validate({
-        submitHandler: function(form) {
-            // If form is valid, submit it!
-            form.submit();
-        },
-        rules: {
-            "your-name": {
-                required: true,
-                maxlength: 128
-            },
-            "your-state": {
-                required: true,
-                maxlength: 2
-            },
-            "your-zip": {
-                required: true,
-                maxlength: 5,
-                digits: true
-        },
-    });
-    // Tooltips
-    $('label span.glyphicon').tooltip();
-});
 
-*/
+    //configure directions modal
+    setupModal('registerModal', '.header-actions .signup');
 
+    //configure directions modal
+    setupModal('loginModal', '.header-actions .login');
 
-    
-    
-
-    
-    /* logic to show name after login
-    var userInfo = {
-        firstName: 'Jane',
-        lastName: 'Doe'
+    //setup register modal
+    var signUpValRules = {
+        "your-email": {
+            email: true
+        }
     };
-    //login click to hide login and show name
-    $('.sign-in button[name=loginButton]').on('click', function(event){
 
-        var $loginForm = $('#login-form'),
-            $userInfoContainer = $('#navbar .user-info'),
-            $nameContainer = $userInfoContainer.find('.user-fullname');
-        
-        //hide login form      
-        $loginForm.hide();
-        $userInfoContainer.show();
-        $nameContainer.text(userInfo.firstName + ' ' + userInfo.lastName);
-    });
-    */
-
- 
+    //setup forms validation
+    setupFormValidation('signUpModalForm', signUpValRules,  'Thank You For Registering!');
+    setupFormValidation('registerForm', {}, 'Thank You!');
+    setupFormValidation('loginForm', {}, 'Welcome, Jane Doe');
+    setupFormValidation('registerFormInModal', {}, 'Thank You!');
+    setupFormValidation('loginFormInModal', {}, 'Welcome, Jane Doe');
+ }); 
