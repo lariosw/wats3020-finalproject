@@ -22,50 +22,74 @@ function validateForm() {
 };*/
 
 
-
-
-
-
-
+function setupModal(modalId, openElementSelector){
+    // Get the modal
+    var modal = document.getElementById(modalId); 
+    
+    //register event to open modal 
+    $(openElementSelector).click(function(){
+        modal.style.display = "block";
+    });
+    
+    //register event to close modal
+    $(modal).find('.close').click(function(){
+        modal.style.display = "none";
+    });
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        };
+    };
+};
 
 $(document).ready(function() {
    
     //initialize youtube popup 
-    
-   
     $("a.demo").YouTubePopUp();
     
-//code to make modal work    
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var $directionsWrapper = $('#notificationbar .directions'); 
-   
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal 
-$directionsWrapper.click(function(){
-    modal.style.display = "block";
-});
-/*    btn.onclick = function() {
-    modal.style.display = "block";
-}*/
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+    //configure directions modal
+    setupModal('directionsModal', '#notificationbar .directions');
     
+        //configure directions modal
+    setupModal('signUpModal', '#newsletter img');
+    
+ }); 
+/*
+//code for newsletter sign up
+$(document).on('ready', function(){
+    // Form validation
+    $('#order-form').validate({
+        submitHandler: function(form) {
+            // If form is valid, submit it!
+            form.submit();
+        },
+        rules: {
+            "your-name": {
+                required: true,
+                maxlength: 128
+            },
+            "your-state": {
+                required: true,
+                maxlength: 2
+            },
+            "your-zip": {
+                required: true,
+                maxlength: 5,
+                digits: true
+        },
+    });
+    // Tooltips
+    $('label span.glyphicon').tooltip();
+});
+
+*/
+
+
+    
+    
+
     
     /* logic to show name after login
     var userInfo = {
@@ -85,5 +109,5 @@ window.onclick = function(event) {
         $nameContainer.text(userInfo.firstName + ' ' + userInfo.lastName);
     });
     */
-    
-}); 
+
+ 

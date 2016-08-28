@@ -1,424 +1,453 @@
 <!doctype html>
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Final Project</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-   
-    <!-- stylesheets-->
-    <link rel="stylesheet" type="text/css" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/YouTubePopUp.css">
-
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Final Project
+  </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- stylesheets-->
+  <link rel="stylesheet" type="text/css" href="CSS/main.css">
+  <link rel="stylesheet" href="CSS/YouTubePopUp.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" media="all" href="style.css">
-  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js">
+  </script>
   <!-- jQuery plugin leanModal under MIT License http://leanmodal.finelysliced.com.au/ -->
-    
-    
 </head>
-
 <body>
-
-    <div class="content-wrapper">
-        
-        <!--Header-->
-        <header class="header header-fixed-top row row-no-padding" role="header">
-
-            <div class="sign-up visible-lg col-lg-2">
-                <div>Not a member?</div>
-
-<form name="myForm" action="demo_form.asp" onsubmit="return validateForm();" method="post">
-Email: <input type="text" name="email">
-<input type="submit" value="Submit">
-</form>
-
-  <div id="loginmodal" style="display:none;">
-    <h1>User Login</h1>
-    <form id="loginform" name="loginform" method="post" action="index.html">
-      <label for="username">Username:</label>
-      <input type="text" name="username" id="username" class="txtfield" tabindex="1">
-      
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="password" class="txtfield" tabindex="2">
-      
-      <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
-    </form>
-  </div>
-                  </div>
-          
-            
-        <div id="navbar" class="navbar-collapse collapse">
-         
-            <!--<div class="navbar-right user-info">Welcome, <span class="user-fullname">First Last</span> <a class="btn btn-default btn-sm">Logout</a></div>-->
-    
-               
-            <div class="top-container col-xs-12 col-sm-11 col-lg-8">
-
-                <img src="aquariumpicts/ticket.gif" class="ticket" alt="ticket-pict">
-
-                <img src="aquariumpicts/aquariumlogo.png" class="aquarium-pict" alt="Seattle-Aquarium">
-            </div>
-            
-            
-            <div class="sign-in visible-lg col-lg-2">
-              <!--  <div>Sign In</div>
-                <input type="text" placeholder="Username" class="form-control" >
-                <input type="password" placeholder="Password" class="form-control">
-                <button type="submit" class="btn btn-primary login" name="loginButton">Login</button>
-            </div>
-            <div class="header-actions col-xs-1 hidden-lg">
-                <button type="submit" class="btn btn-primary signup" name="signupButton">Sign up!</button>
-                <button type="submit" class="btn btn-primary login" name="loginButton">Login</button>
-            </div> -->
-            
-        
-                <form name="myForm" action="demo_form.asp" onsubmit="return validateForm();" method="post">
-                    Email: <input type="text" name="username">
-                    
-                    Password: <input type="text" name="password">
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-            </div>
-        </header>
-
-        <!--Search Bar-->
-        <div id="search-wrapper" class="row row-no-padding">
-            <div class="visible-lg col-lg-2"></div>
-            <div class="col-xs-12 col-sm-11 col-lg-8">
-                <div class="col-xs-11">
-                    <input type="text" placeholder="Search" class="form-control" name="searchText" />
-                </div>
-                <div class="col-xs-1">
-                    <button type="submit" class="btn btn-primary search" name="searchButton">Go</button>
-                </div>
-            </div>
+  <div class="content-wrapper">
+    <!--Header-->
+    <header class="header header-fixed-top row row-no-padding" role="header">
+      <div class="sign-up visible-lg col-lg-2">
+        <div>Not a member?
         </div>
-
-        <!--Navigation Bar-->
-        <nav class="nav top-navbar row ">
-            <ul>
-                <li> 
-                    <a href="https://tickets.seattleaquarium.org/events/78bd87d9-45ae-fba9-7221-48bf8bff195f" class="plan col-xs-6 col-sm-4 col-md-2">Plan Your Visit</a>
-                </li>
-        
-                 <li> 
-                    <a href=" http://www.seattleaquarium.org/membership" class="donate col-xs-6 col-sm-4 col-md-2"> Membership &amp; Donate</a>
-                </li>
-               
-                <li> 
-                    <a href="http://www.seattleaquarium.org/exhibits" class="animals col-xs-6 col-sm-4 col-md-2"> Animals &amp; Activities</a>
-                </li>
-        
-                <li> 
-                    <a href="http://www.seattleaquarium.org/upcoming-events" class="Events col-xs-6 col-sm-4 col-md-2"> Events &amp; Programs</a>
-                </li>
-                
-                <li> 
-                    <a href="http://www.seattleaquarium.org/conservation2"  class="Conserve col-xs-6 col-sm-4 col-md-2"> Conservation</a>
-                </li>     
-                
-                <li> 
-                    <a href="http://www.seattleaquarium.org/about"  class="About col-xs-6 col-sm-4 col-md-2"> About Us</a>
-                </li>             
-            </ul>
-        </nav>
-
-            <!--Carousel Wrapper-->
-            <div class="carousel-wrapper row visible-lg visible-md visible-sm">
-                <div id="carousel-example-generic" class="carousel" data-ride="carousel" data-interval="3000">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="aquariumpicts/carousel1.png" alt="photo1">
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="aquariumpicts/carousel2.png" alt="photo2">
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="aquariumpicts/carousel3.png" alt="photo3">
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Controls-->
-                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
-                </div>
+        <form name="myForm" action="demo_form.asp" onsubmit="return validateForm();" method="post">
+          Email: 
+          <input type="text" name="email">
+          <input type="submit" value="Submit">
+        </form>
+        <div id="loginmodal" style="display:none;">
+          <h1>User Login
+          </h1>
+          <form id="loginform" name="loginform" method="post" action="index.html">
+            <label for="username">Username:
+            </label>
+            <input type="text" name="username" id="username" class="txtfield" tabindex="1">
+            <label for="password">Password:
+            </label>
+            <input type="password" name="password" id="password" class="txtfield" tabindex="2">
+            <div class="center">
+              <input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3">
             </div>
-    
-        <!-- facebook photos -->
-        <div id="photo-container" class="photo-box row row-no-padding">
-       
-                    <div class="instagram1 col-lg-2 col-md-4 visible-lg visible-md">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:62.4537037037% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BIQVRR3gVhl/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Here&#39;s a fun #OctoFact: the arm span of a giant Pacific #octopus can be up to an incredible 20 feet across—about the height of a two-story building! #SuckerSunday</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Seattle Aquarium (@seattleaquarium) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-07-24T19:01:06+00:00">Jul 24, 2016 at 12:01pm PDT</time></p></div></blockquote>
-                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-                    </div>
-                    
-                    <div class="instagram2  col-lg-2  col-md-4 visible-lg visible-md">
-                            <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px;  padding:0;">
-                                <div style="padding:8px;">
-                                    <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:49.212962963% 0; text-align:center; width:100%;">
-                                        <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
-                                    </div>
-                                    <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BIsuECVg5Bw/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Seattle Aquarium (@seattleaquarium)</a> on
-                                        <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-04T19:36:29+00:00">Aug 4, 2016 at 12:36pm PDT</time>
-                                    </p>
-                                </div>
-                            </blockquote>
-                            <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-                        </div>
-
-                    <div class="instagram3  col-lg-2  col-md-4 visible-lg visible-md">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:35.9722222222% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BIYeLyFgdfG/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">#DidYouKnow painted anemones can live for up to 80 years? #BeachNaturalist Jen Strongin visits these particular Constellation Beach anemones year after year. Check out our blog (link in bio) to find out what else is new this week on the beach. #KnowYourBeach</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Seattle Aquarium (@seattleaquarium) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-07-27T22:52:55+00:00">Jul 27, 2016 at 3:52pm PDT</time></p></div></blockquote>
-                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-                    </div>
-                    
-                    <div class="instagram4  col-lg-2  col-md-4 visible-lg visible-md">
-                        <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0;">
-                            <div style="padding:8px;">
-                                <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:59.0277777778% 0; text-align:center; width:100%;">
-                                    <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
-                                </div>
-                                <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BI-t3_-g7Y1/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Seattle Aquarium (@seattleaquarium)</a> on
-                                    <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-11T19:21:10+00:00">Aug 11, 2016 at 12:21pm PDT</time>
-                                </p>
-                            </div>
-                        </blockquote>
-                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-                    </div>
-
-
-                    <div class="instagram5  col-lg-2  col-md-4 visible-lg visible-md">
-                           <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:42.4528301887% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BIqDX6dgsUF/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Seattle Aquarium (@seattleaquarium)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-03T18:44:59+00:00">Aug 3, 2016 at 11:44am PDT</time></p></div></blockquote>
-                            <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-                    </div>
-                    
-                    <div class="instagram6  col-lg-2  col-md-4 visible-lg visible-md">
-                        <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0;">
-                            <div style="padding:8px;">
-                                <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:58.4259259259% 0; text-align:center; width:100%;">
-                                    <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
-                                </div>
-                                <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BI0sA2vgm0A/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Seattle Aquarium (@seattleaquarium)</a> on
-                                    <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-07T21:52:30+00:00">Aug 7, 2016 at 2:52pm PDT</time>
-                                </p>
-                            </div>
-                        </blockquote>
-                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-                    </div>
-             
-                    <div class="instagram7  col-lg-2 visible-lg">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:43.5648148148% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BIGI5D2AIk5/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Do you have a favorite #SeattleAquarium fish? Let us know in the comments!</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Seattle Aquarium (@seattleaquarium) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-07-20T20:00:32+00:00">Jul 20, 2016 at 1:00pm PDT</time></p></div></blockquote>
-                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-                    </div>
-                
-                    <div class="instagram8  col-lg-2 visible-lg">
-                        <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0;">
-                            <div style="padding:8px;">
-                                <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;">
-                                    <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
-                                </div>
-                                <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BIk1mpGgGaQ/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Seattle Aquarium (@seattleaquarium)</a> on
-                                    <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-01T18:08:27+00:00">Aug 1, 2016 at 11:08am PDT</time>
-                                </p>
-                            </div>
-                        </blockquote>
-                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-                    </div>
-
-                    <div class="instagram9  col-lg-2 visible-lg">
-                        <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BJI71etgYxt/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A video posted by Seattle Aquarium (@seattleaquarium)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-15T18:35:34+00:00">Aug 15, 2016 at 11:35am PDT</time></p></div></blockquote>
-                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-                    </div>
-                    
-                    <div class="instagram10  col-lg-2 visible-lg">
-                        <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0;">
-                            <div style="padding:8px;">
-                                <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;">
-                                    <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
-                                </div>
-                                <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BInlQjVAmar/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Seattle Aquarium (@seattleaquarium)</a> on
-                                    <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-02T19:43:21+00:00">Aug 2, 2016 at 12:43pm PDT</time>
-                                </p>
-                            </div>
-                        </blockquote>
-                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-                    </div>
-            
-                
-            <div class="instagram11  col-lg-2 visible-lg">
-                    
-                      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:42.037037037% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BJLoKbbgu19/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Say hello to Odie, our new male giant Pacific #octopus. He currently tips the scales at 25 pounds!</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Seattle Aquarium (@seattleaquarium) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-16T19:41:23+00:00">Aug 16, 2016 at 12:41pm PDT</time></p></div></blockquote>
-                            <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-                    </div>
-
-                
-                    <div class="instagram12  col-lg-2 visible-lg">
-                        <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0;">
-                            <div style="padding:8px;">
-                                <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;">
-                                    <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
-                                </div>
-                                <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BInlQjVAmar/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Seattle Aquarium (@seattleaquarium)</a> on
-                                    <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-02T19:43:21+00:00">Aug 2, 2016 at 12:43pm PDT</time>
-                                </p>
-                            </div>
-                        </blockquote>
-                        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-                    </div>
+          </form>
         </div>
-
-        <!-- notification bar -->
-            <div id="notificationbar" class="notifications notifybar row">
-                <div class="left-most buytickets col-lg-2 col-md-4  col-sm-6 col-xs-12"> 
-                    <img src="aquariumpicts/purchasetickets.png" alt="purchase">
-                </div>
-                
-                <div class="member col-lg-2 col-md-4  col-sm-6 col-xs-12"> 
-                    <img src="aquariumpicts/familymember.png" alt="member">
-                </div>
-                <div class="hourschedule col-lg-2 col-md-4  col-sm-6 col-xs-12">
-                    <img src="aquariumpicts/hoursphoto.png">
-                </div>
-                <div class="directions col-lg-2 col-md-4  col-sm-6 col-xs-12">
-                    <img src="aquariumpicts/directions.png" alt="directions">
-                </div>
-
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-          <!-- Modal content -->
-          <div class="modal-content">
-            <span class="close">x</span>
-<<<<<<< HEAD
-            <p><h1>Directions</h1>
-            <h2>If you are traveling north on I-5</h2>
-
-=======
-              <h1>Directions</h1>
-            <h2>If you are traveling north on I-5</h2>
-              <ul>
->>>>>>> gh-pages
-            <li>Take the Madison St./Convention Place exit.</li>
-            <li>Stay straight to go onto 7th Ave.</li>
-            <li>Take the first left onto Madison St.</li>
-            <li>Turn right onto Alaskan Way.</li>
-            <li>1483 Alaskan Way Pier 59 is on the left.</li>
-<<<<<<< HEAD
-            
-            <h2>If you are traveling south on I-5</h2>
-
-=======
-            </ul>
-              
-            <h2>If you are traveling south on I-5</h2>
-              <ul>
->>>>>>> gh-pages
-            <li>Take Union St. exit, exit 165B.</li>
-            <li>Stay straight to go onto Union St.</li>
-            <li>Turn left onto 5th Ave.</li>
-            <li>Turn right onto Madison St.</li>
-            <li>Turn right onto Alaskan Way.</li>
-            <li>1483 Alaskan Way Pier 59 is on the left.</li>
-<<<<<<< HEAD
-              </p>
-=======
-             </ul>
-                  
->>>>>>> gh-pages
-          </div>
-
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <!--<div class="navbar-right user-info">Welcome, <span class="user-fullname">First Last</span> <a class="btn btn-default btn-sm">Logout</a></div>-->
+        <div class="top-container col-xs-12 col-sm-11 col-lg-8">
+          <img src="aquariumpicts/ticket.gif" class="ticket" alt="ticket-pict">
+          <img src="aquariumpicts/aquariumlogo.png" class="aquarium-pict" alt="Seattle-Aquarium">
         </div>
-                
-                
-                <div class="events col-lg-2 col-md-4  col-sm-6 col-xs-12">
-                <img src="aquariumpicts/events.png" alt="events">
-                </div>
-                
-                <div class="party col-lg-2 col-md-4  col-sm-6 col-xs-12">
-                <img src="aquariumpicts/party.jpg" alt="privateparty">
-                </div>
-            </div>
-        
-        <div id="newsletter" class="newsletter-bar row row-no-padding">
-            
-            <a class="col-xs-12" href="http://www.seattleaquarium.org/subscribe" id="subscribe-link">
-                <img src="aquariumpicts/newsletter.png" class="col-xs-12" id="newsletterpict">
-            </a>
+        <div class="sign-in visible-lg col-lg-2">
+          <!--  <div>Sign In</div>
+<input type="text" placeholder="Username" class="form-control" >
+<input type="password" placeholder="Password" class="form-control">
+<button type="submit" class="btn btn-primary login" name="loginButton">Login</button>
+</div>
+<div class="header-actions col-xs-1 hidden-lg">
+<button type="submit" class="btn btn-primary signup" name="signupButton">Sign up!</button>
+<button type="submit" class="btn btn-primary login" name="loginButton">Login</button>
+</div> -->
+          <form name="myForm" action="demo_form.asp" onsubmit="return validateForm();" method="post">
+            Email: 
+            <input type="text" name="username">
+            Password: 
+            <input type="text" name="password">
+            <input type="submit" value="Submit">
+          </form>
         </div>
-        
-        <aside class="side-controls">
-            
-            <div class="connecthide"> 
-                <a class="demo" href="https://youtu.be/eTWovtka6hg">
-                <img src="aquariumpicts/webcam.png" id="webcam">
-                </a>
-                <img src="aquariumpicts/socialmediapict.png" id="socialmedia">
-            </div>
-            <div class="connectshow">
-                <img src="aquariumpicts/connectimg.png">
-            </div>
-        </aside>
-        
-        <footer id="footer" class="footer">
-            <div id="bottom-nav" class="bottom-navbar visible-lg visible-md row">
-                <ul>
-                    <li class="home col-md-2">Home
-                    </li>
-                    <li class="jobs col-md-2">Jobs
-                    </li>
-                    <li class="volunteer col-md-2">Volunteer
-                    </li>
-                    <li class="press col-md-2">Press Room
-                    </li>
-                    <li class="contact us col-md-2"> Contact Us
-                    </li>
-                    <li class="privacy col-md-2">Privacy Policy
-                    </li>
-                    <li class="siteMap col-md-2"> Site Map
-                    </li>
-                    <li class="logIn col-md-2">Login
-                    </li>
-                </ul>
-            </div>
-            <div id="bottom-info" class="bottom-info visible-lg visible-md row">
-                <ul>
-                    <li class="address col-lg-2 col-md-2"> Seattle Aquarium, 1483 Alaskan Way, Pier 59, Seattle, WA 98101
-                    </li>
-                    <li class="phone col-lg-2 col-md-2"> Phone: (206) 386-4300
-                    </li>
-                    <li class="email col-lg-2 col-md-2"> Email: info@seattleaquarium.org
-                    </li>
-                    <li class="hours col-lg-2 col-md-2"> Hours: 9:30am-5pm daily
-                    </li>
-                    <li class="trademark col-lg-2 col-md-2"> @2016, Seattle Aquarium is a registered 501(c)(3) nonprofit
-                    </li>
-                </ul>
-            </div>
-        </footer>
+      </div>
+    </header>
+    <!--Search Bar-->
+    <div id="search-wrapper" class="row row-no-padding">
+      <div class="visible-lg col-lg-2">
+      </div>
+      <div class="col-xs-12 col-sm-11 col-lg-8">
+        <div class="col-xs-11">
+          <input type="text" placeholder="Search" class="form-control" name="searchText" />
+        </div>
+        <div class="col-xs-1">
+          <button type="submit" class="btn btn-primary search" name="searchButton">Go
+          </button>
+        </div>
+      </div>
     </div>
-    
-    <!-- js files -->
-    <script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="JS/Main.js"></script>
-    <script type="text/javascript" src="JS/YouTubePopUp.jquery.js"></script>
-
-</body>
+    <!--Navigation Bar-->
+    <nav class="nav top-navbar row ">
+      <ul>
+        <li> 
+          <a href="https://tickets.seattleaquarium.org/events/78bd87d9-45ae-fba9-7221-48bf8bff195f" class="plan col-xs-6 col-sm-4 col-md-2">Plan Your Visit
+          </a>
+        </li>
+        <li> 
+          <a href=" http://www.seattleaquarium.org/membership" class="donate col-xs-6 col-sm-4 col-md-2"> Membership &amp; Donate
+          </a>
+        </li>
+        <li> 
+          <a href="http://www.seattleaquarium.org/exhibits" class="animals col-xs-6 col-sm-4 col-md-2"> Animals &amp; Activities
+          </a>
+        </li>
+        <li> 
+          <a href="http://www.seattleaquarium.org/upcoming-events" class="Events col-xs-6 col-sm-4 col-md-2"> Events &amp; Programs
+          </a>
+        </li>
+        <li> 
+          <a href="http://www.seattleaquarium.org/conservation2"  class="Conserve col-xs-6 col-sm-4 col-md-2"> Conservation
+          </a>
+        </li>     
+        <li> 
+          <a href="http://www.seattleaquarium.org/about"  class="About col-xs-6 col-sm-4 col-md-2"> About Us
+          </a>
+        </li>             
+      </ul>
+    </nav>
+    <!--Carousel Wrapper-->
+    <div class="carousel-wrapper row visible-lg visible-md visible-sm">
+      <div id="carousel-example-generic" class="carousel" data-ride="carousel" data-interval="3000">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
+          </li>
+          <li data-target="#carousel-example-generic" data-slide-to="1">
+          </li>
+          <li data-target="#carousel-example-generic" data-slide-to="2">
+          </li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="aquariumpicts/carousel1.png" alt="photo1">
+            <div class="carousel-caption">
+            </div>
+          </div>
+          <div class="item">
+            <img src="aquariumpicts/carousel2.png" alt="photo2">
+            <div class="carousel-caption">
+            </div>
+          </div>
+          <div class="item">
+            <img src="aquariumpicts/carousel3.png" alt="photo3">
+            <div class="carousel-caption">
+            </div>
+          </div>
+        </div>
+        <!--Controls-->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right">
+          </span>
+        </a>
+      </div>
+    </div>
+    <!-- instagram photos -->
+    <div class="instagramPhotos">
+      <div id="instagram1" class="photo-box row row-no-padding">
+        <a class="instagram col-lg-2 col-md-4 visible-lg visible-md"  href="https://www.instagram.com/p/BIQVRR3gVhl/">
+          <img src="instagrampicts/instagram1.png">
+        </a>
+      </div>     
+      <div id="instagram2" class="photo-box row row-no-padding">
+        <a class="instagram col-lg-2 col-md-4 visible-lg visible-md"  href="https://www.instagram.com/p/BIsuECVg5Bw/">
+          <img src="instagrampicts/instagram2.png">
+        </a>
+      </div>  
+      <div id="instagram3" class="photo-box row row-no-padding">
+        <a class="instagram col-lg-2 col-md-4 visible-lg visible-md"  href="https://www.instagram.com/p/BIYeLyFgdfG/">
+          <img src="instagrampicts/instagram3.png">
+        </a>
+      </div>   
+      <div id="instagram4" class="photo-box row row-no-padding">
+        <a class="instagram col-lg-2 col-md-4 visible-lg visible-md"  href="https://www.instagram.com/p/BI-t3_-g7Y1/">
+          <img src="instagrampicts/instagram4.png">
+        </a>
+      </div>   
+      <div id="instagram5" class="photo-box row row-no-padding">
+        <a class="instagram col-lg-2 col-md-4 visible-lg visible-md"  href="https://www.instagram.com/p/BIqDX6dgsUF/">
+          <img src="instagrampicts/instagram5.png">
+        </a>
+      </div>  
+      <div id="instagram6" class="photo-box row row-no-padding">
+        <a class="instagram col-lg-2 col-md-4 visible-lg visible-md"  href="https://www.instagram.com/p/BI0sA2vgm0A/">
+          <img src="instagrampicts/instagram6.png">
+        </a>
+      </div>     
+      <div id="instagram7" class="photo-box row row-no-padding">
+        <a class="instagram col-lg-2 col-md-4 visible-lg visible-md"  href="https://www.instagram.com/p/BIGI5D2AIk5/">
+          <img src="instagrampicts/instagram7.png">
+        </a>
+      </div>    
+      <div id="instagram8" class="photo-box row row-no-padding">
+        <a class="instagram col-lg-2 col-md-4 visible-lg visible-md"  href="https://www.instagram.com/p/BIk1mpGgGaQ/">
+          <img src="instagrampicts/instagram8.png">
+        </a>
+      </div> 
+      <div id="instagram9" class="photo-box row row-no-padding">
+        <a class="instagram col-lg-2 col-md-4 visible-lg visible-md"  href="https://www.instagram.com/p/BJI71etgYxt/?taken-by=seattleaquarium">
+          <img src="instagrampicts/instagram9.png">
+        </a>
+      </div> 
+      <div id="instagram10" class="photo-box row row-no-padding">
+        <a class="instagram col-lg-2 col-md-4 visible-lg visible-md"  href="https://www.instagram.com/p/BInlQjVAmar/">
+          <img src="instagrampicts/instagram10.png">
+        </a>
+      </div>  
+      <div id="instagram11" class="photo-box row row-no-padding">
+        <a class="instagram col-lg-2 col-md-4 visible-lg visible-md"  href="https://www.instagram.com/p/BInlQjVAmar/">
+          <img src="instagrampicts/instagram11.png">
+        </a>
+      </div>  
+      <div id="instagram12" class="photo-box row row-no-padding">
+        <a class="instagram col-lg-2 col-md-4 visible-lg visible-md"  href="https://www.instagram.com/p/BInlQjVAmar/">
+          <img src="instagrampicts/instagram11.png">
+        </a>
+      </div>  
+    </div>
+    <!-- notification bar -->
+    <div id="notificationbar" class="notifications notifybar row">
+      <div id="buyTickets" class="buyTickets row row-no-padding">
+        <a class="left-most buyTickets  col-lg-2 col-md-4  col-sm-6 col-xs-12" href=" https://tickets.seattleaquarium.org/events/78bd87d9-45ae-fba9-7221-48bf8bff195f">
+          <img src="aquariumpicts/purchasetickets.png" alt="tickets-left">
+        </a>
+      </div>
+      <div id="membership" class="membership row row-no-padding">
+        <a class="membership  col-lg-2 col-md-4  col-sm-6 col-xs-12" href=" http://www.seattleaquarium.org/membership">
+          <img src="aquariumpicts/familymember.png" alt="membership">
+        </a>
+      </div>
+      <div class="hourschedule col-lg-2 col-md-4  col-sm-6 col-xs-12">
+        <img src="aquariumpicts/hoursphoto.png">
+      </div>
+      <div class="directions col-lg-2 col-md-4  col-sm-6 col-xs-12">
+        <img src="aquariumpicts/directions.png" alt="directions">
+      </div>
+      <div id="eventCal" class="events row row-no-padding">
+        <a class="calendar  col-lg-2 col-md-4  col-sm-6 col-xs-12" href="http://www.seattleaquarium.org/upcoming-events">
+          <img src="aquariumpicts/events.png" alt="events">
+        </a>
+      </div>
+      <div id="parties" class="parties row row-no-padding">
+        <a class="parties  col-lg-2 col-md-4  col-sm-6 col-xs-12" href="http://www.seattleaquarium.org/special-events">
+          <img src="aquariumpicts/party.jpg" alt="privateParty">
+        </a>
+      </div>
+      <!--    <div class="party col-lg-2 col-md-4  col-sm-6 col-xs-12">
+<img src="aquariumpicts/party.jpg" alt="privateparty">
+</div> -->
+    </div>
+    <div id="newsletter" class="newsletter-bar row row-no-padding">
+      <img src="aquariumpicts/newsletter.png" class="col-xs-12" id="newsletterpict">
+    </div>
+    <!-- connect sidebar -->
+    <div id="connectWrapper" class="container">
+      <aside class="side-controls">
+        <div class="connecthide"> 
+          <a class="demo" href="https://youtu.be/eTWovtka6hg">
+            <img src="aquariumpicts/webcam.png" id="webcam">
+          </a>
+          <img src="aquariumpicts/socialmediapict.png" id="socialmedia">
+        </div>
+        <div class="connectshow">
+          <img src="aquariumpicts/connectimg.png">
+        </div>
+      </aside>
+      <footer id="footer" class="footer">
+        <div id="bottom-nav" class="bottom-navbar visible-lg visible-md row">
+          <ul>
+            <li class="home col-md-2">Home
+            </li>
+            <li class="jobs col-md-2">Jobs
+            </li>
+            <li class="volunteer col-md-2">Volunteer
+            </li>
+            <li class="press col-md-2">Press Room
+            </li>
+            <li class="contact us col-md-2"> Contact Us
+            </li>
+            <li class="privacy col-md-2">Privacy Policy
+            </li>
+            <li class="siteMap col-md-2"> Site Map
+            </li>
+            <li class="logIn col-md-2">Login
+            </li>
+          </ul>
+        </div>
+        <div id="bottom-info" class="bottom-info visible-lg visible-md row">
+          <ul>
+            <li class="address col-lg-2 col-md-2"> Seattle Aquarium, 1483 Alaskan Way, Pier 59, Seattle, WA 98101
+            </li>
+            <li class="phone col-lg-2 col-md-2"> Phone: (206) 386-4300
+            </li>
+            <li class="email col-lg-2 col-md-2"> Email: info@seattleaquarium.org
+            </li>
+            <li class="hours col-lg-2 col-md-2"> Hours: 9:30am-5pm daily
+            </li>
+            <li class="trademark col-lg-2 col-md-2"> @2016, Seattle Aquarium is a registered 501(c)(3) nonprofit
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!-- Directions Modal -->
+  <div id="directionsModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">x
+      </span>
+      <div>
+        <h1>Directions
+        </h1>
+        <h2>If you are traveling north on I-5
+        </h2>
+        <ul>
+          <li>Take the Madison St./Convention Place exit.
+          </li>
+          <li>Stay straight to go onto 7th Ave.
+          </li>
+          <li>Take the first left onto Madison St.
+          </li>
+          <li>Turn right onto Alaskan Way.
+          </li>
+          <li>1483 Alaskan Way Pier 59 is on the left.
+          </li>
+        </ul>
+        <h2>If you are traveling south on I-5
+        </h2>
+        <ul>
+          <li>Take Union St. exit, exit 165B.
+          </li>
+          <li>Stay straight to go onto Union St.
+          </li>
+          <li>Turn left onto 5th Ave.
+          </li>
+          <li>Turn right onto Madison St.
+          </li>
+          <li>Turn right onto Alaskan Way.
+          </li>
+          <li>1483 Alaskan Way Pier 59 is on the left.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- sign up modal -->
+  <div id="signUpModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">x
+      </span>
+      <div>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Subscribe with us!
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div class="container">
+          <p class="lead">Receive the latest on our events, specials and fun things going on at the aquarium.
+          </p>
+          <form class="form-horizontal" role="form" action="thank-you.html" method="get" id="order-form">
+          </form>
+        </div>
+        <fieldset>
+          <legend>Your Information
+          </legend>
+          <div class="form-group required">
+            <label class="col-sm-3 control-label" for="your-name">
+              <span class="glyphicon glyphicon-question-sign" title="Your first and last name.">
+              </span> Your Name
+            </label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="your-name" id="your-name" placeholder="Your Name">
+            </div>
+          </div>
+          <!--email-->
+          <div class="form-group required">
+            <label class="col-sm-3 control-label" for="your-email">
+              <span class="glyphicon glyphicon-question-sign" title="example@domain.com">
+              </span> Email
+            </label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="your-email" id="your-email" placeholder="Your email">
+            </div>        
+          </div>
+          <!--address-->
+          <div class="form-group required">
+            <label class="col-sm-3 control-label" for="your-address">Street Address
+            </label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="your-address" id="your-address" placeholder="Your Street Address">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="your-address2">Street Address (additional)
+            </label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="your-address2" id="your-address2" placeholder="Your Street Address (additional)">
+            </div>
+          </div>
+          <!--city-->
+          <div class="form-group required">
+            <label class="col-sm-3 control-label" for="your-city">City
+            </label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="your-city" id="your-city" placeholder="Your City">
+            </div>
+          </div>
+          <!--state-->
+          <div class="form-group required">
+            <label class="col-sm-3 control-label" for="your-state">
+              <span class="glyphicon glyphicon-question-sign" title="Two-letter state abbreviation.">
+              </span> State
+            </label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="your-state" id="your-state" placeholder="Your State">
+            </div>
+            <!--zip code-->
+          </div>
+          <div class="form-group required">
+            <label class="col-sm-3 control-label" for="your-zip">
+              <span class="glyphicon glyphicon-question-sign" title="US ZIP code only.">
+              </span> ZIP
+            </label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="your-zip" id="your-zip" placeholder="Your ZIP Code">
+            </div>
+          </div>
+          <!--submit button -->
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+              <button type="submit" class="btn btn-success"> 
+                <span class="glyphicon glyphicon-">
+                </span> Submit
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <!-- js files -->
+      <script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+      </script>
+      <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+      </script>
+      <script type="text/javascript" src="JS/Main.js">
+      </script>
+      <script type="text/javascript" src="JS/YouTubePopUp.jquery.js">
+      </script>
+      </body>

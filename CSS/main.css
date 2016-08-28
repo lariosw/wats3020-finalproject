@@ -10,8 +10,8 @@
     margin-left: 0 !important;
 }
 
-iframe {
-    width: 100% !important;
+.instagram img {
+    width: 150px !important;
     height: 150px !important;
 }
 
